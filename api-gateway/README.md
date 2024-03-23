@@ -1,4 +1,4 @@
-Kong Configuration Management with decK
+**Kong Configuration Management with decK**
 
 Efficiently manage your Kong configurations declaratively using decK. This guide covers the basics of adding services, routes, and plugins.
 
@@ -41,8 +41,3 @@ Troubleshooting
     Check YAML syntax and completeness.
     Ensure Kong is operational.
     Use --verbose with deck sync for detailed errors.
-
-Contributing
-
-Your contributions are welcome! Feel free to improve documentation or examples through pull requests or issues.
-License
