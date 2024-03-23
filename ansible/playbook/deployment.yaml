@@ -1,0 +1,9 @@
+- name: Deploy to Kubernetes
+  hosts: all
+  gather_facts: no
+  tasks:
+  - name: Apply Kubernetes Deployment
+    community.kubernetes.k8s:
+      kubeconfig: /path/to/your/kubeconfig
+      state: present
+      src: /deployment//deployment/chart/devops-mif/deployment.yaml
