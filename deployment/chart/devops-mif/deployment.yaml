@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: php-app-deployment
+  name: devops-mif
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: php-app
+      app: devops-mif
   template:
     metadata:
       labels:
-        app: php-app
+        app: devops-mif
     spec:
       containers:
-      - name: php-app
-        image: yourusername/yourphpapp:tag
+      - name: devops-mif
+        image: thehorseman/devops-mif_images:testing
         ports:
         - containerPort: 80
 
@@ -22,11 +22,11 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: php-app-service
+  name: devops-mif
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
-    app: php-app
+    app: devops-mif
   ports:
     - protocol: TCP
       port: 80
