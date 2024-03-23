@@ -1,4 +1,4 @@
-image: docker:latest
+image: thehorseman/devops-mif_images:testing
 
 services:
   - docker:dind
@@ -9,7 +9,7 @@ before_script:
 build-and-push:
   stage: build
   script:
-    - docker build -t yourusername/yourrepositoryname:latest .
-    - docker push yourusername/yourrepositoryname:latest
+    - docker build -t thehorseman/devops-mif_images:testing .
+    - docker push thehorseman/devops-mif_images:testing
   only:
     - main
