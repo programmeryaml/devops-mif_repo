@@ -1,18 +1,15 @@
 FROM alpine:latest
 
-# Essentials
-RUN echo "UTC" > /etc/timezone
-RUN apk add --no-cache zip unzip curl sqlite nginx supervisor
-
 # Installing bash
 RUN apk add bash
 RUN sed -i 's/bin\/ash/bin\/bash/g' /etc/passwd
 
 # Installing PHP
 RUN apk add --no-cache php82 php82-common php82-fpm
-
 RUN ln -sf /usr/bin/php82 /usr/bin/php
 
+# Installing Nginx
+RUN apk add --no-cache nginx
 RUN mkdir -p /run/nginx
 
 # Copy the Nginx configuration file
