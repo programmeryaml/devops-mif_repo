@@ -1,0 +1,15 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+before_script:
+  - docker login -u "$DOCKER_USERNAME" -p "$DOCKER_PASSWORD"
+
+build-and-push:
+  stage: build
+  script:
+    - docker build -t yourusername/yourrepositoryname:latest .
+    - docker push yourusername/yourrepositoryname:latest
+  only:
+    - main
