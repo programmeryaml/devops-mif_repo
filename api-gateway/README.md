@@ -1,50 +1,48 @@
-Project Title
-This README provides instructions on how to use decK to manage Kong configurations declaratively. We use two main directories: deck for adding services and routes, and plugins for adding plugins.
+Kong Configuration Management with decK
+
+Efficiently manage your Kong configurations declaratively using decK. This guide covers the basics of adding services, routes, and plugins.
 
 Prerequisites
-Before you start, ensure you have the following installed:
 
-Kong
-decK
-Directory Structure
-deck/: Contains declarative configuration files for services and routes.
-plugins/: Contains configuration files for plugins.
+    Kong
+    decK
+
 Setup
-Install Kong: Follow the official Kong installation guide.
 
-Install decK: Refer to the decK installation instructions.
+    Install Kong: Follow the Kong installation guide.
+    Install decK: See decK installation instructions.
 
-How to Use
-Adding Services and Routes
-Navigate to the deck/ directory.
+Directory Structure
 
-Create or modify the YAML configuration files for your services and routes. Refer to the Kong Declarative Configuration format for guidance.
+    deck/: YAML files for services and routes.
+    plugins/: YAML files for plugins.
 
-Apply the configuration using decK:
+Usage
+Services and Routes
 
-sh
-Copy code
-deck sync -s <service_configuration_file>.yml
-Adding Plugins
-Navigate to the plugins/ directory.
+    Go to deck/.
+    Edit YAML files for services/routes.
+    Apply with deck sync -s <file>.yml.
 
-Create or modify the YAML configuration files for your plugins, ensuring they match the structure required by Kong.
+Plugins
 
-To apply the plugin configurations to your Kong instance, use:
+    Go to plugins/.
+    Edit YAML files for plugins.
+    Apply with deck sync -s <file>.yml.
 
-sh
-Copy code
-deck sync -s <plugin_configuration_file>.yml
 Best Practices
-Keep your configuration files version-controlled to track changes over time.
-Test your configurations in a staging environment before applying them to production.
-Regularly update both Kong and decK to their latest versions to take advantage of new features and bug fixes.
-Troubleshooting
-If you encounter errors during the deck sync process, verify the syntax and completeness of your YAML files.
-Ensure Kong is running and accessible from where you're executing decK commands.
-For detailed error information, use the --verbose flag with decK commands.
-Contributing
-We welcome contributions! Please feel free to submit pull requests or open issues to improve the documentation or configuration examples.
 
+    Version control your YAML files.
+    Test configurations in a staging environment.
+    Keep Kong and decK updated.
+
+Troubleshooting
+
+    Check YAML syntax and completeness.
+    Ensure Kong is operational.
+    Use --verbose with deck sync for detailed errors.
+
+Contributing
+
+Your contributions are welcome! Feel free to improve documentation or examples through pull requests or issues.
 License
-Specify the license under which your project is made available.
