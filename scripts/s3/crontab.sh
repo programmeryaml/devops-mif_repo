@@ -5,7 +5,7 @@ backup() {
     # Define S3 bucket and server backup path
     # S3_BUCKET: The S3 bucket to be synchronized
     # SERVER_BACKUP_PATH: The local directory where the bucket content will be stored
-    S3_BUCKET="s3://<your-s3-bucket-name>"  # Replace with your S3 bucket name
+    S3_BUCKET="s3://s3-devops-automations"  # Replace with your S3 bucket name
     SERVER_BACKUP_PATH="/mnt/backup"  # Replace with your local server directory path
 
     # Sync S3 bucket with server backup path
