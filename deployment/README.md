@@ -1,4 +1,4 @@
-Quick Deployment Guide
+**Quick Deployment Guide**
 
 Deploy your PHP applications effortlessly using Docker and Helm in this quick setup guide.
 Prerequisites
