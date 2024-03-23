@@ -1,8 +1,11 @@
-_format_version: "1.1"
+_format_version: "3.0"
 services:
-  - name: example-service
-    url: http://mockbin.org
+  - name: devops-mif-service
+    protocol: http
+    host: devops-mif.devops.svc.cluster.local
+    path: /v1/devops-mif
+    port: 80
     routes:
-      - name: example-route
+      - name: devops-mif-route
         paths:
-          - /test
+          - /v1/devops-mif
